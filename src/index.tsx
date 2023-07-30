@@ -1,15 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+//import App from './App/App';
 import reportWebVitals from './reportWebVitals';
+import PetRecord from './PetRecord/PetRecord';
+import Pets from './Pets/Pets';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <PetRecord id={1} petName={'Dog'} additionalInfo={'His name is Cooper and he is very loyal.'} displayInfo={true}/>
+    <PetRecord id={2} petName={'Kitten'} additionalInfo={'The name of this kitten is Ollie, she is very mobile and funny'} displayInfo={true}/>
+    <PetRecord id={3} petName={'Hamster'} additionalInfo={'A hamster named Fin loves to eat'} displayInfo={false}/>
+    <Pets/>
+    {/* <App /> */}
   </React.StrictMode>
 );
 
