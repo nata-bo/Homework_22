@@ -19,7 +19,8 @@ export default function():JSX.Element{
       id: 6,
       petName: "Parrot",
       additionalInfo: "Can say \"Hello\"",
-      displayInfo: true
+      displayInfo: true,
+      color:"red"
     }
   ];
 
@@ -32,6 +33,7 @@ export default function():JSX.Element{
         petName={pet.petName}
         additionalInfo={pet.additionalInfo}
         displayInfo={pet.displayInfo}
+        color={pet.color}
         />
       ))}
         </>

@@ -1,22 +1,29 @@
+import styles from './PetRecord.module.css'
+  interface Pet {
+   id:number; 
+   petName:string; 
+   additionalInfo:string; 
+   displayInfo:boolean;
+   color?:string;
+};
 
-
-type Props ={id:number; petName:string; additionalInfo:string; displayInfo:boolean};
-
-export default function PetRecord(p:Props):JSX.Element{
-    const{id,petName,additionalInfo,displayInfo} = p;
+export default function PetRecord(props:Pet):JSX.Element{
+    const{id,petName,additionalInfo,displayInfo,color} = props;
 
      let moreInfo:string;
      if(displayInfo===true){
-        moreInfo=id +", "+ additionalInfo;
+        moreInfo= additionalInfo;
      }else{
         moreInfo="";
      }
 
  return(
-    <>
-       <h1>{petName}</h1>
+    <div className={styles.container}>
+       <h1 style={{backgroundColor:color,fontSize:'30px'}}>{id}. {petName}</h1>
        <p>{moreInfo}</p>
-    </>
+       {/* <p>{(displayInfo)?additionalInfo:""}</p> тернарный опер. */}
+        {/* <p>{displayInfo && additionalInfo}</p>  Еще вариант*/}
+    </div>
  )
 
 

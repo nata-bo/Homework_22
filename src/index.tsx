@@ -5,6 +5,8 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import PetRecord from './PetRecord/PetRecord';
 import Pets from './Pets/Pets';
+import DogCard from './DogCard/DogCard';
+import Activity from './Activity/Activity';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -15,6 +17,8 @@ root.render(
     <PetRecord id={2} petName={'Kitten'} additionalInfo={'The name of this kitten is Ollie, she is very mobile and funny'} displayInfo={true}/>
     <PetRecord id={3} petName={'Hamster'} additionalInfo={'A hamster named Fin loves to eat'} displayInfo={false}/>
     <Pets/>
+    <DogCard/>
+    <Activity/>
     {/* <App /> */}
   </React.StrictMode>
 );
