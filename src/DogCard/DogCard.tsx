@@ -22,7 +22,7 @@ export default function DogCard():JSX.Element{
 
     return(
         <>
-        <img src={url} alt="Dog" />
+        <img width="250px" src={url} alt="Dog" />
         </>
     )
 }
